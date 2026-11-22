@@ -1,0 +1,5 @@
+# DSH「小鱼钟」（fish-clock）
+# 这一行把插件插进宿主；配置不在这里，在 $DSH_HOME/fish-clock.json（改完下一轮就生效，不用重启）。
+- insert:
+    - id: fish-clock
+      name: 'fish-clock'

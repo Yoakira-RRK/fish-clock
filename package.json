@@ -1,0 +1,45 @@
+{
+  "name": "fish-clock",
+  "version": "1.2.0",
+  "description": "按时刻表叫 AI 主动找你：每天几个固定时段内必发一次，白天再随机补 1~2 次，夜里静音。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "proactive",
+    "schedule",
+    "cron",
+    "companion"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.png",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots"],
+      "external": ["react"]
+    }
+  },
+  "license": "MIT"
+}
