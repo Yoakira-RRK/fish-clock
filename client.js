@@ -312,6 +312,26 @@ window.__ModuleLoader__.load({
           h('div', { className: 'fc-dim' }, '可以跨夜，比如 23 点到 9 点。'),
         ),
 
+        // 每日复盘
+        h(
+          'div',
+          { className: 'fc-card' },
+          h('div', { className: 'fc-head' }, h('h3', { className: 'fc-title' }, '每日复盘')),
+          h(
+            'div',
+            { className: 'fc-row' },
+            h('label', null, '每天'),
+            h('input', {
+              className: 'fc-in',
+              type: 'time',
+              value: (草稿.复盘时间 || ''),
+              onChange: (e) => 改('复盘时间', e.target.value),
+            }),
+            h('span', { className: 'fc-dim' }, '点让她自己写今天的复盘（留空 = 关掉）'),
+          ),
+          h('div', { className: 'fc-dim' }, '复盘只写文件、不发消息：写进 学习\\每日复盘\\<日期>.md，值得长期留的再追加到 MEMORY.md。'),
+        ),
+
         // 她开口那句
         h(
           'div',

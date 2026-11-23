@@ -1,6 +1,6 @@
 {
   "name": "fish-clock",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "description": "按时刻表叫 AI 主动找你：每天几个固定时段内必发一次，白天再随机补 1~2 次，夜里静音。",
   "keywords": [
     "dsh",
@@ -37,8 +37,12 @@
     },
     "client": {
       "platform": "web",
-      "inject": ["slots"],
-      "external": ["react"]
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
     }
   },
   "license": "MIT"
